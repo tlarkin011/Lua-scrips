@@ -1,8 +1,8 @@
-# Lua-scripts
+<!-- # Lua-scripts
 
 # The following code should be placed in a script in ServerScriptStorage
 # This code turns parts in a "Checkpoints" folder into checkpoints
-# It teleports players to the last checkpoint they touched when they respawn
+# It teleports players to the last checkpoint they touched when they respawn -->
 
 local checkpoints = workspace:WaitForChild("Checkpoints")
 
