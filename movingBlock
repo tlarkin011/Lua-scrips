@@ -1,0 +1,19 @@
+# This script moves its parent part back and forth along the x-axis
+
+local RunService = game:GetService("RunService")
+local part = script.Parent
+local velocity = -20
+local counter = 0
+
+task.wait(0.5)
+
+function move(step)
+	counter = counter + step
+	part.Position = part.Position + Vector3.new(velocity * step, 0, 0)
+	if counter >= 1.5 then
+		velocity = -1 * velocity
+		counter = 0
+	end
+end
+
+RunService.Heartbeat:Connect(move)
