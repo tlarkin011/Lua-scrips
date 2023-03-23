@@ -4,21 +4,22 @@ local debounce = false
 
 part.Touched:Connect(function(touched)
 
-	debounce = true
-	if touched.Parent:FindFirstChild("Humanoid") and debounce == true  then
-		
+	
+	if touched.Parent:FindFirstChild("Humanoid") and debounce == false  then
+		debounce = true
 		local copy = part:Clone()
 		copy.Parent = part.Parent
-		local newZ = copy.Position.Z + 15
+		local size = part.Size.Z
+		local newZ = copy.Position.Z + size
 		
 		copy.Position = Vector3.new(360, 135.7, newZ)
 		copy.Parent = part.Parent
-		wait(2)
+		wait(100)
 		copy.CanTouch = false
 		debounce = false
 		
 		
 		
 	end
-end)	
+end)
 	
